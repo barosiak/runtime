@@ -585,12 +585,7 @@ GetStatus(pid_t pid, pid_t* ppid, pid_t* tgid, std::string* name)
         {
             if (name != nullptr)
             {
-                char* n = strchr(line + 6, '\n');
-                if (n != nullptr)
-                {
-                    *n = '\0';
-                }
-                *name = line + 6;
+                *name = "dummy";
             }
         }
     }
